@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <title>アンケートフォーム</title>
+</head>
+<body>
+  <a href="/answers">結果一覧</a>
+　
+　<div class="row">
+    <div class="col-lg-8" col-lg-offset-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span class="glyphicon glyphicon-triangle-right"></span>
+          アンケートフォーム
+        </div>
+        <div class="panel-body">
+          <form action="/answers" method="post">
+            <div class="form-group">
+            <label for="name">名前（必須）</label><br>
+              <input type="text" name="name" id="name" placeholder="ここに名前を入力" required>
+            </div>
+            <div class="form-group">
+            <label for="age">年齢</label><br>
+              <input type="number" name="age" id="age" placeholder="ここに年齢を入力">
+            </div>
+            <div class="form-group">
+            <label for="grade">学年</label><br>
+              <select name="grade" id="grade">
+                <option value="中１">中学１年</option>
+                <option value="中２">中学２年</option>
+                <option value="中３">中学３年</option>
+                <option value="高１">高校１年</option>
+                <option value="高２">高校２年</option>
+                <option value="高３">高校３年</option>
+              </select>
+            </div>
+            <div class="form-group">
+            <label for="gender">性別</label><br>
+            <input type= "radio" name="gender" value="man" id="gender" checked>男
+            <input type= "radio" name="gender" value="woman"> 女
+            </div>
+            <div class="form-gropup">
+            <label for="email">メールアドレス（必須）</label><br>
+            <input type= "email" name="email" id="email" placeholder="メールアドレスを入力" required>
+            </div>
+            <div class="form-gropup">
+            <label for="date">日付</label><br>
+            <input type= "date" name="date" id="date">
+            </div>
+            <div class="form-gropup">
+            <label for="password">パスワード（必須）</label><br>
+            <input type= "password" name="password" id="password" maxlength="10" minlebgth="6" placeholder="パスワードを入力" required><br>
+            </div>
+            <label for="content">感想・質問・その他</label><br>
+            <textarea name="content" id="content" rows="4" cols="40" placeholder="その他感想や質問はこちら">
+            </textarea>
+            </div>
+            <input type="submit" class="btn btn-primary pull-left"></input>
+            <input type="reset" class="btn btn-warning pull-left"></input>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
